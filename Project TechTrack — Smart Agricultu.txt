@@ -1,0 +1,50 @@
+Project: TechTrack — Smart Agriculture AI App
+
+Components pushed to GitHub:
+
+Frontend (/src, root config files)
+Backend (/backend)
+ML Service (/ml_service)
+Android App (/android) — Capacitor wrapper
+Training Scripts (/training, *.py at root)
+Datasets (/datasets)
+Tech Stack:
+
+Frontend
+
+React 18 + TypeScript
+Vite (build tool)
+Tailwind CSS + shadcn/ui (component library)
+Framer Motion (animations)
+React Router v6
+Recharts (charts)
+jsPDF (PDF report generation)
+Capacitor (Android wrapper — turns the web app into a native Android APK)
+i18n: custom context-based system with English and Tamil (translations.json)
+Backend (Node.js)
+
+Node.js + Express
+Multer (file upload middleware)
+Axios (HTTP calls to ML service and external APIs)
+OpenWeatherMap API (weather data)
+data.gov.in API (market prices)
+dotenv, CORS
+ML Service (Python)
+
+FastAPI + Uvicorn
+TensorFlow / Keras (image classification — soil type, crop disease)
+scikit-learn (crop recommendation model)
+pandas, numpy (data processing)
+Pillow (image preprocessing)
+Custom rule-based fallback logic when models aren't loaded
+Database / Storage
+
+No database — stateless API. ML models loaded from .h5 / pickle files at runtime.
+External APIs
+
+OpenWeatherMap (weather + forecast)
+data.gov.in (mandi/market prices)
+DevOps / Deployment
+
+Railway (backend + ML service deployment — railway.json, railway.toml)
+Android build via Gradle + Capacitor CLI
