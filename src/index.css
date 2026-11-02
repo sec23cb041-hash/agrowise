@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 153 40% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 153 40% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 153 40% 15%;
+
+    --primary: 153 40% 15%;
+    --primary-foreground: 40 33% 96%;
+
+    --secondary: 153 20% 92%;
+    --secondary-foreground: 153 40% 15%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 153 10% 40%;
+
+    --accent: 36 91% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 145 63% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --warning: 36 91% 44%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 153 15% 88%;
+    --input: 153 15% 88%;
+    --ring: 153 40% 15%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 40 33% 96%;
+    --sidebar-foreground: 153 40% 15%;
+    --sidebar-primary: 153 40% 15%;
+    --sidebar-primary-foreground: 40 33% 96%;
+    --sidebar-accent: 153 20% 92%;
+    --sidebar-accent-foreground: 153 40% 15%;
+    --sidebar-border: 153 15% 88%;
+    --sidebar-ring: 153 40% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Pulse animation for mic */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+.animate-pulse-ring-slow {
+  animation: pulse-ring 3s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+.animate-pulse-ring-slower {
+  animation: pulse-ring 4s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
